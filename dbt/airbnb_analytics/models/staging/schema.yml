@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: stg_listings
+    description: 'Cleaned London Airbnb listings'
+    columns:
+      - name: listing_id
+        tests: [not_null, unique]
+      - name: price_usd
+        tests: [not_null]
+      - name: room_type
+        tests:
+          - accepted_values:
+              values: ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room']
+      - name: neighbourhood
+        tests: [not_null]
+  - name: stg_reviews
+    columns:
+      - name: review_id
+        tests: [not_null, unique]
+      - name: review_date
+        tests: [not_null]
