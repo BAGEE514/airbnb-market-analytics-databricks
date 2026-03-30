@@ -1,0 +1,13 @@
+
+target/
+dbt_packages/
+logs/
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+data/
+*.csv
+*.gz
+.env
+dbt/airbnb_analytics/target/
+dbt/airbnb_analytics/logs/
